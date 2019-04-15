@@ -15,7 +15,7 @@ import {StyleSheet, Text, View} from 'react-native';
 class BillingScreen extends Component {
 
     static navigationOptions = {
-        title: 'Billing',
+        title: 'Billing Information',
     };
     render() {
         return (
@@ -25,5 +25,6 @@ class BillingScreen extends Component {
         );
     }
 }
+
 
 export default BillingScreen;

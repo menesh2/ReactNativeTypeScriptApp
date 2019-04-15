@@ -10,19 +10,28 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Plan from "./Plan";
+import Plan from "../components/plan/Plan";
+import CustomButton from "../components/button/CustomButton";
+import BillingScreen from "./BillingScreen";
 
-class InternetPlanScreen extends Component {
+class InternetPlanScreen extends React.Component<any> {
 
     static navigationOptions = {
         title: 'Internet Plan',
     };
+
     render() {
         return (
             <View style={styles.container}>
-                <Plan name={'ANNUAL'} price={'19.95$/mo'} promotionText={'SAVE 20%'}></Plan>
-                <Plan name={'MONTHLY'} price={'25.95$/mo'} promotionText={'SAVE 10%'}></Plan>
+                <View style={styles.plansContainer}>
+                    <Plan name={'ANNUAL'} price={'19.95$/mo'} promotionText={'SAVE 20%'}></Plan>
+                    <Plan name={'MONTHLY'} price={'25.95$/mo'} promotionText={'SAVE 10%'}></Plan>
+                </View>
+                <CustomButton text={"Continue To Billing"}
+                              onPress={() => this.props.navigation.navigate('BillingScreen')}
+                />
             </View>
+
         );
     }
 }
@@ -34,16 +43,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
-    plan: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
+    plansContainer: {
+        flex: 0.9,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+    }
 });
 
 export default InternetPlanScreen;
