@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
+import { LocationFetcher } from './LocationFetcher'
 
 class LocationScreen extends React.Component {
     
