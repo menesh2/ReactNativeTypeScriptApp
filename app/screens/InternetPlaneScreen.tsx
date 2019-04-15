@@ -12,10 +12,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Plan from "./Plan";
 
-const internetPlans = [];
-
-interface Props {}
-export default class ChoosePlaneScreen extends Component<Props> {
+export class InternetPlaneScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
