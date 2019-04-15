@@ -22,7 +22,6 @@ export default class Plan extends Component<IPlan> {
 
 const styles = StyleSheet.create({
     plan: {
-
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

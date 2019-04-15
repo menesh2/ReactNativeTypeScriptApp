@@ -12,12 +12,13 @@ import {StyleSheet} from 'react-native';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import LocationScreen from './LocationScreen'
 import InternetPlanScreen from "./app/screens/InternetPlanScreen";
+import BillingScreen from "./app/screens/BillingScreen";
 
 
 const MainNavigator = createStackNavigator({
         LocationScreen: {screen: LocationScreen},
-        InternetPlanScreen: {screen: InternetPlanScreen}
-
+        InternetPlanScreen: {screen: InternetPlanScreen},
+        BillingScreen: {screen: BillingScreen}
     },
     {
         initialRouteName: "LocationScreen"
