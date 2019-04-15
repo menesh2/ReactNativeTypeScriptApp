@@ -9,10 +9,14 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import Plan from "./Plan";
 
-export class InternetPlaneScreen extends Component {
+class InternetPlanScreen extends Component {
+
+    static navigationOptions = {
+        title: 'Internet Plan',
+    };
     render() {
         return (
             <View style={styles.container}>
@@ -41,3 +45,5 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 });
+
+export default InternetPlanScreen;

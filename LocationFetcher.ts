@@ -1,13 +1,14 @@
-import { Geolocation, GeolocationReturnType } from "react-native";
+import {Geolocation, GeolocationReturnType} from "react-native";
 
-export default class LocationFetcher {
-    successCallback = (location: String) => {};
+class LocationFetcher {
+    successCallback = (location: String) => {
+    };
 
     getCurrentLocation(success: (location: String) => void) {
         this.successCallback = success
         Geolocation.requestAuthorization()
         Geolocation.getCurrentPosition(this.positionArrived);
-        
+
         return;
     }
 
@@ -15,3 +16,5 @@ export default class LocationFetcher {
         this.successCallback("arrived")
     }
 }
+
+export default LocationFetcher;
