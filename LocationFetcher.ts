@@ -4,10 +4,14 @@ class LocationFetcher {
     successCallback = (location: String) => {
     };
 
-    getCurrentLocation(success: (location: String) => void) {
+    public getCurrentLocation(success: (location: String) => void) {
         this.successCallback = success
-        Geolocation.requestAuthorization()
-        Geolocation.getCurrentPosition(this.positionArrived);
+        navigator.geolocation.requestAuthorization();
+        navigator.geolocation.getCurrentPosition((position: GeolocationReturnType) => {
+            
+            let positionString = JSON.stringify(position);
+            this.successCallback(positionString);
+        });
 
         return;
     }
