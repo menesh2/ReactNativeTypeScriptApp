@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
+    "plugins": [
+      { "name": "typescript-tslint-plugin" }
+    ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "react",
-    "lib": ["es6"],
+    "lib": ["es2017"],
     "moduleResolution": "node",
     "noEmit": true,
     "strict": true,

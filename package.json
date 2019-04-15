@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "tslint --project tsconfig.json",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.8.3",
-    "react-native": "0.59.4"
+    "react-native": "0.59.4",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-navigation": "^3.8.1"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",
@@ -21,7 +24,12 @@
     "jest": "24.7.1",
     "metro-react-native-babel-preset": "0.53.1",
     "react-test-renderer": "16.8.3",
-    "typescript": "3.4.3"
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^4.0.0",
+    "typescript": "3.4.3",
+    "typescript-tslint-plugin": "^0.3.1"
   },
   "jest": {
     "preset": "react-native"
