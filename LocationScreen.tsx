@@ -3,7 +3,7 @@ import {Button, StyleSheet, Text, View} from 'react-native';
 import {LocationFetcher} from './LocationFetcher'
 import CustomButton from "./app/components/button/CustomButton";
 
-class LocationScreen extends React.Component<any> {
+ class LocationScreen extends React.Component<any> {
 
     private locationFetcher = new LocationFetcher();
     private location: String = "location";
@@ -38,8 +38,5 @@ class LocationScreen extends React.Component<any> {
     };
 }
 
-const styles = StyleSheet.create({
-
-})
-
 export default LocationScreen;
+
