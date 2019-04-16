@@ -10,6 +10,9 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import { requireNativeComponent } from 'react-native';
+
+const CustomView = requireNativeComponent("CustomView");
 
 
 class BillingScreen extends Component {
@@ -19,8 +22,8 @@ class BillingScreen extends Component {
     };
     render() {
         return (
-            <View>
-
+            <View style={{flex: 1}}>
+                <CustomView style={{flex: 1}} />
             </View>
         );
     }

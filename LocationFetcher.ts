@@ -1,12 +1,12 @@
+
 import {Geolocation, GeolocationReturnType} from "react-native";
 
 export class LocationFetcher {
-    successCallback = (location: String) => {
-    };
+    successCallback = (location: String) => {};
 
     public getCurrentLocation(success: (location: String) => void) {
         this.successCallback = success
-        // navigator.geolocation.requestAuthorization();
+        navigator.geolocation.requestAuthorization();
         navigator.geolocation.getCurrentPosition((position: GeolocationReturnType) => {
             
             let positionString = JSON.stringify(position);
