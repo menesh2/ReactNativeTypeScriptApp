@@ -11,10 +11,7 @@ import Foundation
 
 class CustomViewManager: RCTViewManager {
   override func view() -> UIView! {
-    let label = UILabel()
-    label.text = "Swift Counter"
-    label.textAlignment = .center
-    return label
+    return CustomView()
   }
   
   override static func requiresMainQueueSetup() -> Bool {

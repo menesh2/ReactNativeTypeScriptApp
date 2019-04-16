@@ -23,7 +23,7 @@ class BillingScreen extends Component {
     render() {
         return (
             <View style={{flex: 1}}>
-                <CustomView style={{flex: 1}} />
+                <CustomView style={{flex: 1}} count={2} />
             </View>
         );
     }
